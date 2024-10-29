@@ -122,7 +122,7 @@ int nroVal(const char *str) {
         str++;
     }
 
-    return 1; // La cadena es un número válido
+    return 1; 
 }
 
 
