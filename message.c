@@ -2,11 +2,15 @@
 #include <math.h>
 #include <stdlib.h>
 #include <ctype.h>
+
+
 float opBox(float largo, float ancho, int undBox, float area);
 float obDatos(float *largo, float *ancho, int *undBox, float *area, float resultado);
 int nroVal(const char *str);
+
 void menuintro();
 void mainMenu();
+
 int main(){
 
     int undBox, opcion;
