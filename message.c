@@ -3,16 +3,23 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+///#include "headers/save_work.h"
+
 
 float opBox(float largo, float ancho, int undBox, float area);
 float obDatos(float *largo, float *ancho, int *undBox, float *area, float resultado);
 int nroVal(const char *str);
+char name_work[50];
+
+void profile_work(char *name_work);
+
 
 void menuintro();
 void mainMenu();
 
 int main(){
 
+    char name_work[50];
     int undBox, opcion;
     float area, resultado, largo , ancho;
 
@@ -23,6 +30,7 @@ int main(){
 
         printf("\n \n \n-------Menu-------");
         printf("\n \nIniciar calculadora[1]");
+        printf("\n \nCrear proyecto[2]");
         printf("\nSalir [0]");
         printf("\n \nIngresa una opcion: ");
         scanf("%d", &opcion);
@@ -36,6 +44,14 @@ int main(){
             printf("La cantidad de cajas requeridas son : %.0f", resultado);
 
             break;
+
+        case 2:
+            system("clear");
+            profile_work(name_work);
+            printf("\n \n \nNombre ingresado: %s \n ", name_work);
+            break;
+
+
 
         case 0:
             printf("Saliendo del programa. \n");
@@ -140,6 +156,11 @@ float opBox(float largo, float ancho, int undBox, float area){
     cantBox = round(area/totalArea);
 
     return cantBox;
+}
+
+void profile_work(char *name_work){
+    printf("\n \nIngresa un nombre: ");
+    scanf("%49s", name_work);   
 }
 
 void menuintro(){
